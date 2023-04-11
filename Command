@@ -1,0 +1,2 @@
+In command prompt type - git. It 'll display if we have git if not download git from chrome. 
+git clone - "git clone url"
