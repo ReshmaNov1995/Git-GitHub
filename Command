@@ -1,2 +1,4 @@
 In command prompt type - git. It 'll display if we have git if not download git from chrome. 
-git clone - "git clone url"
+
+1) git clone - "git clone url" - take url by clicking on code which is highlighted in green.
+It 'll clone all the files & folders from the repository into local.
