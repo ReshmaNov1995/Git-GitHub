@@ -1,2 +1,10 @@
 Git - It is a tool for version control
+
 version control - To keep track of a code 
+
+Synchronise code - Syncing here means updating all the branches in the personal fork that are also present in the Host repository.
+Ex: If 2 persons are working in the same project they will download the source code from the Host repository & work on it. 
+After completing their part, they will commit into the Host repository.
+
+This Host Repository is said to be GitHub.
+The whole process is Git, The main server is GitHub. Note: we can also use other than GitHub like Gitlab, Bitbucket.
