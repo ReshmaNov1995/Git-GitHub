@@ -1,3 +1,7 @@
+Git is a desktop application
+GitHub is a Host service for git.
+
+
 Git is a tool used for version control system.
 Git is used to track the individual employee's piece of code in the project. To get back the old Source code.
 The source code repository is shared to the individual employee to develop further.
@@ -16,3 +20,11 @@ It is a advanced technique. Repositories can be created locally.
 Here Add, branching, merging, conflict resolving, commit.
 Data can be stored locally. Internet connection is not required.
 Multiple project maintenance is easier.
+
+
+GitHub:
+
+Push, Pull, Clone.
+Push -> Git to GitHub
+Pull -> particular file from github to git
+clone -> All files in the repositoye from github to git
