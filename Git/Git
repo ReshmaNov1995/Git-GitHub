@@ -1,10 +1,18 @@
-Git - It is a tool for version control
+Git is a tool used for version control system.
+Git is used to track the individual employee's piece of code in the project. To get back the old Source code.
+The source code repository is shared to the individual employee to develop further.
 
-version control - To keep track of a code 
+Git is a distributed version control system.
+SVN is a centralized version control system.
 
-Synchronise code - Syncing here means updating all the branches in the personal fork that are also present in the Host repository.
-Ex: If 2 persons are working in the same project they will download the source code from the Host repository & work on it. 
-After completing their part, they will commit into the Host repository.
+Centralized version control system:
+Here only check in, check out, commit. It is a old technique.
+Data stored in servers. Internet connection is required.
+If the server is down, then totally collapsed.
+Multiple project maintenance is tedious.
 
-This Host Repository is said to be GitHub.
-The whole process is Git, The main server is GitHub. Note: we can also use other than GitHub like Gitlab, Bitbucket.
+Distributed version control system:
+It is a advanced technique. Repositories can be created locally.
+Here Add, branching, merging, conflict resolving, commit.
+Data can be stored locally. Internet connection is not required.
+Multiple project maintenance is easier.
