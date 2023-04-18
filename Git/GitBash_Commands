@@ -1,0 +1,50 @@
+Git Bash should be opened on the required directory.
+
+Any folder->Right click->Git Bash
+
+project working directory - pwd 
+path of the directory
+
+list of files - ls 
+
+version - git --version
+
+initiate - git init
+.git folder will be created in the directory
+
+flow:
+working directory(init) -- (add) > index or staging area -- (commit) > local repository
+
+add file to staging area - git add resh.txt
+(for all files)
+git add .  (or) 
+git add *.txt (or)
+git add -a
+
+to know the staging area files - git ls-files
+
+push from staging area to local - git commit -m message
+
+to know the file pushed - git log --oneline
+It 'll display the message passed while commit.
+
+
+Writing inside new file in folder via git:
+vim aa.txt (vi-editor, m-modify, file name with extension)
+file 'll be opened in the terminal
+click on insert button
+Type the required data
+click on escape 
+Type :wq (w-wait, q-quit) or :x (x-save&close)
+
+
+Display the content inside the file in gitbash:
+cat aa.txt 
+
+To check whether any files are updated in the working directory:
+git status
+will display the modified file names
+
+To know diff b/w working directory & staging area:
+git diff krn.txt
+
