@@ -47,4 +47,4 @@ will display the modified file names
 
 To know diff b/w working directory & staging area:
 git diff krn.txt
-
+Path: E:\K_Git
