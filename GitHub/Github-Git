@@ -1,0 +1,30 @@
+1) GitHub's user name & email is configuring in GitBash.
+git config --global user.name "ReshmaNov1995"
+git config --global user.email "reshumoorthy@gmail.com"
+
+2) Check configured name & mail: PUSH
+  git config --list
+  git remote add origin remote repository's url
+  git push origin master
+It 'll ask for psswd. After signing in->File will be pushed in the remote repository.
+
+3) Clone - Pulling whole repository
+  git clone remote repository's url
+  It 'll copy the repository inside the local folder.
+  
+4) Pull - pulling particular file
+  
+  
+5) Private Repository Push Action:
+  Create private repository in GitHub
+  Create file in local & commit in local repository
+  git config --global user.name "ReshmaNov1995"
+  git config --global user.email "reshumoorthy@gmail.com"
+  git remote add origin remote repository's url
+  ssh-keygen -t ed25519 -C "reshumoorthy@gmail.com" (-t means target, -C means check, (ed25519)anything)
+  It 'll display the key generated folder path. Also the required key.
+  Add the ssh key in github,
+  settings->SSH & GPG Keys->New SSH Key->Title Name->Copy the key->Click on Add SSH Key
+  Local File from the local repository will be pushed into the private remote repository.
+  
+  
