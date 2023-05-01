@@ -25,6 +25,7 @@ It 'll ask for psswd. After signing in->File will be pushed in the remote reposi
   It 'll display the key generated folder path. Also the required key.
   Add the ssh key in github,
   settings->SSH & GPG Keys->New SSH Key->Title Name->Copy the key->Click on Add SSH Key
+  git push origin master
   Local File from the local repository will be pushed into the private remote repository.
   
   
