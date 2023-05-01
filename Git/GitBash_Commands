@@ -3,33 +3,33 @@ Git Bash should be opened on the required directory.
 Any folder->Right click->Git Bash
 
 project working directory - pwd 
-path of the directory
+1) path of the directory
 
-list of files - ls 
+2) list of files - ls 
 
-version - git --version
+3) version - git --version
 
-initiate - git init
+4) initiate - git init
 .git folder will be created in the directory
 
 flow:
 working directory(init) -- (add) > index or staging area -- (commit) > local repository
 
-add file to staging area - git add resh.txt
+5) add file to staging area - git add resh.txt
 (for all files)
 git add .  (or) 
 git add *.txt (or)
 git add -a
 
-to know the staging area files - git ls-files
+6) to know the staging area files - git ls-files
 
-push from staging area to local - git commit -m message
+7) push from staging area to local - git commit -m message
 
-to know the file pushed - git log --oneline
+8) to know the file pushed - git log --oneline
 It 'll display the message passed while commit.
 
 
-Writing inside new file in folder via git:
+9) Writing inside new file in folder via git:
 vim aa.txt (vi-editor, m-modify, file name with extension)
 file 'll be opened in the terminal
 click on insert button
@@ -38,13 +38,150 @@ click on escape
 Type :wq (w-wait, q-quit) or :x (x-save&close)
 
 
-Display the content inside the file in gitbash:
+10) Display the content inside the file in gitbash:
 cat aa.txt 
 
-To check whether any files are updated in the working directory:
-git status
-will display the modified file names
+11) To check whether to know the available branches:
+git status 
+or
+git branch
+will display the branch names
 
-To know diff b/w working directory & staging area:
-git diff krn.txt
-Path: E:\K_Git
+Note: Higher level comes frst in result
+init->working directory
+Add->Staging area
+Commit->Local Repository
+
+12) To know diff b/w working directory & staging area:
+Scenario: krn.txt file has created. It has 1 line krn. Added & commited in staging area/local repository.
+Added 1 more line nair in Same krn.txt file. Not Added & Committed. Exists only in working directory.
+
+git diff krn.txt (Path: E:\K_Git)
+Ans:
+diff --git a/krn.txt b/krn.txt (a/krn.txt-staging area, b/krn.txt-working directory)
+index f7ab890..e678fab 100644 (Here f7ab890 is a staging area's Hash Memory & e678fab is a working directory's Hash Memory. 100 is filetype, 6-Read+Write(R-4, W-2))
+--- a/krn.txt (working directory line is missing in staging area)
++++ b/krn.txt (working directory line is updated in staging area)
+@@ -1 +1,2 @@ (-1 staging area missing, +1 Line is in both staging area & working directory, 2indicates - 1 line extra in working directory)
+ krn (front space indicated line present in both the files)
++nair (Value Added extra only in working dircetory)
+
+Levels: Working directory, Staging Area, Local Repository(Git)
+
+13) Diff b/w Working directory & Local Repository:
+Scenario: krn.txt file has created. It has 1 line krn. Added & commited in local repository.
+Added 1 more line nair in Same krn.txt file. Not Added & Committed. Exists only in working directory.
+
+git diff HEAD krn.txt (HEAD-commit)
+Ans:
+diff --git a/krn.txt b/krn.txt
+index f7ab890..c58f678 100644
+--- a/krn.txt
++++ b/krn.txt
+@@ -1 +1,2 @@
+ krn
++nair
+
+14) Diff b/w staging area & local repository:
+Scenario: krn.txt file has created. It has 1 line krn. Added & commited in local repository.
+Added 1 more line nair in Same krn.txt file. Only Added & not Committed. Exists only in working directory.
+
+git diff --staged HEAD krn.txt
+Ans:
+diff --git a/kk.txt b/kk.txt
+index f7ab890..c58f678 100644
+--- a/kk.txt
++++ b/kk.txt
+@@ -1 +1,2 @@
+ krn
++nair
+
+HEAD will take the last commit
+Specific Commit will take the specific line of commit. Unique commit id will be genrated for each commit. It has taken based on the generated commit id.
+
+15) Diff b/w Working directory & Specific Commit:
+Scenario: krn.txt file has created. It has 1 line krn. Added & commited in local repository.
+Added 1 more line nair in Same krn.txt file. Not Added & Committed. Exists only in working directory.
+
+git log --oneline (It will display all the commit id)
+git diff commitid krn.txt
+
+16) Diff b/w Staging area & Specific Commit:
+Scenario: krn.txt file has created. It has 1 line krn. Added & commited in local repository.
+Added 1 more line nair in Same krn.txt file. Only Added & not Committed. Exists only in working directory.
+
+git log --oneline (It will display all the commit id)
+git diff --staged commitid krn.txt
+
+17) Diff b/w 2 commit:
+Scenario: krn.txt file has created. It has 1 line krn. Added & commited in local repository(commitid 1).
+Added 1 more line nair in Same krn.txt file. Only Added & Committed(commitid 2). 
+
+git diff commitid1 commitid2
+
+18) Diff b/w 2 branch:
+git diff branchname1 branchname2
+
+19) Diff b/w local repository branch & Remote repository branch:
+git diff localrepositorybranchname remoterepositoryurl/remoterepositorybranchname
+
+20) Remove from Working directory & Staging area:
+git rm -r krn.txt (rm-remove, -r means recovery)
+
+21) Remove from Staging area:
+git rm -r --staged krn.txt
+
+22) Remove from Working directory:
+rm -r krn.txt
+
+23) TFWD - Tracking file of working directory (Existing in staging area & remote repository)
+UCTF - Unstaged Changes of Tracking file (Not Existing in Staging area)
+
+24) Checkout - It is used to remove the UCTF.
+git checkout --krn.txt
+
+25) Navigate to the corresponding branch,
+git checkout branchname
+
+26) Reset - For undo
+Reset can be done only using commitid.
+3 types of mode,
+--soft 
+syx: git reset --soft commitid (It will undo only particular line/file relates to the commitid in the local repository. It 'll still exists in working directory & Staging area)
+--mixed
+syx: git reset --mixed commitid (It will undo only particular line/file relates to the commitid in the local repository & Staging area. It 'll still exists in working directory)
+--hard
+syx: git reset --hard commitid (It will undo only particular line/file relates to the commitid in the local repository & Staging area, working directory).
+
+27) Branching - Default Branch is there always i.e All the committed files will be in Default Branch which is said to be Main branch/Master Branch.
+git branch (To see the avail branch, Current branch indicates by *)
+git branch branchname (To create new branch)
+git checkout branchname
+(New branch will inherit all the current commits present in the main branch)
+
+28) Merging (Main branch to new branch merging)
+2 types of merge fast forward, 3 way merge. 
+git checkout master (switching to the main branch)
+git merge branchname (Merging can be done only after switching to the main branch)
+fast forward - Merging without conflicts
+3 way merge - 
+krn.txt -> line1 added as "a"
+commited in master branch
+krn.txt-> line2 added as "b"
+create branch
+krn.txt-> line3 added as "c"
+commited in master branch
+switch over to new branch
+open krn.txt using->vim->line3 added as "d"
+commited in new branch
+switch over to master branch
+merge it -> conflict occurs bcoz, master branch as line3 & also new branch as different line3. It has confused to merge which line3 to be inserted first.
+Solution: Manually open using vim then change & save. Then commit to master branch.
+
+
+Note: All the branch files are virtual. It can be handled using vim.
+
+
+
+
+
