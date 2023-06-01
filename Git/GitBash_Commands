@@ -130,7 +130,7 @@ git diff localrepositorybranchname remoterepositoryurl/remoterepositorybranchnam
 20) Remove from Working directory & Staging area:
 git rm -r -f krn.txt (rm-remove, -r means recovery, -f force removal)
 
-21) Remove from Staging area:
+21) Remove from Staging area: (Not working)
 git rm -r --staged krn.txt
 
 22) Remove from Working directory:
@@ -139,8 +139,8 @@ rm -r krn.txt
 23) TFWD - Tracking file of working directory (Existing in staging area & remote repository)
 UCTF - Unstaged Changes of Tracking file (Not Existing in Staging area)
 
-24) Checkout - It is used to remove the UCTF.
-git checkout --krn.txt
+24) Checkout - It is used to remove the content in the working directory which has not stagged.
+git checkout -- krn.txt
 
 25) Navigate to the corresponding branch,
 git checkout branchname
