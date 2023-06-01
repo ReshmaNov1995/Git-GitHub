@@ -2,6 +2,8 @@ Git Bash should be opened on the required directory.
 
 Any folder->Right click->Git Bash
 
+Note: Always create a branch & work on it. Then Merge that new branch to main branch. Only main branch files can be pushed to the remote repository.
+
 1) path of the directory -> pwd (project working directory)
 
 2) list of files -> ls 
