@@ -13,7 +13,7 @@ Any folder->Right click->Git Bash
 
 flow:
 working directory(init) --> (add) will go to index or staging area --> (commit) will go to local repository.
-local repository - We can't view the local repository. From local repository we can push to remote repository.
+local repository - We can't view the local repository. From local repository we can (push) to remote repository.
 
 5) add file to staging area - git add resh.txt
 (for all files)
@@ -27,7 +27,6 @@ git add -a
 
 8) to know the file pushed - git log --oneline
 It 'll display the message passed while commit.
-
 
 9) Writing inside new file in folder via git:
 vim aa.txt (vi-editor, m-modify, file name with extension)
