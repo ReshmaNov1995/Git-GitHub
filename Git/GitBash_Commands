@@ -2,8 +2,7 @@ Git Bash should be opened on the required directory.
 
 Any folder->Right click->Git Bash
 
-project working directory -> pwd 
-1) path of the directory
+1) path of the directory -> pwd (project working directory)
 
 2) list of files -> ls 
 
