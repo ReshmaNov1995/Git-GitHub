@@ -48,7 +48,7 @@ or
 git branch
 will display the branch names
 
-Note: Higher level comes frst in result
+Note: Latest level comes frst in result in difference.
 init->working directory
 Add->Staging area
 Commit->Local Repository
