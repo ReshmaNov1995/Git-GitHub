@@ -157,7 +157,7 @@ syx: git reset --hard commitid (It will undo only particular line/file relates t
 
 27) Branching - Default Branch is there always i.e All the committed files will be in Default Branch which is said to be Main branch/Master Branch.
 git branch (To see the avail branch, Current branch indicates by *)
-git branch branchname (To create new branch)
+git branch branchname (To create new branch) (The main should have a commit. If not then it 'll throw error.)
 git checkout branchname
 (New branch will inherit all the current commits present in the main branch)
 
