@@ -13,7 +13,7 @@ project working directory -> pwd
 .git folder will be created in the directory
 
 flow:
-working directory(init) -- (add) > index or staging area -- (commit) > local repository
+working directory(init) --> (add) will go to index or staging area --> (commit) will go to local repository.
 
 5) add file to staging area - git add resh.txt
 (for all files)
