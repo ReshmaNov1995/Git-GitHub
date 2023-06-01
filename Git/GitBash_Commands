@@ -25,7 +25,7 @@ git add -a
 
 6) to know the staging area files - git ls-files
 
-7) push from staging area to local - git commit -m message
+7) commit from staging area to local - git commit -m message
 
 8) to know the file pushed - git log --oneline
 It 'll display the message passed while commit.
@@ -63,9 +63,10 @@ diff --git a/krn.txt b/krn.txt (a/krn.txt-staging area, b/krn.txt-working direct
 index f7ab890..e678fab 100644 (Here f7ab890 is a staging area's Hash Memory & e678fab is a working directory's Hash Memory. 100 is filetype, 6-Read+Write(R-4, W-2))
 --- a/krn.txt (working directory line is missing in staging area)
 +++ b/krn.txt (working directory line is updated in staging area)
-@@ -1 +1,2 @@ (-1 staging area missing, +1 Line is in both staging area & working directory, 2indicates - 1 line extra in working directory)
+@@ -1,1 +1,2 @@ (-1 staging area missing, 1 total no.of lines. +1 working directory extra, 2indicates - total no.of lines in working directory)
  krn (front space indicated line present in both the files)
 +nair (Value Added extra only in working dircetory)
+
 
 Levels: Working directory, Staging Area, Local Repository(Git)
 
