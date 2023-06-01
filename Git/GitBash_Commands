@@ -13,6 +13,7 @@ Any folder->Right click->Git Bash
 
 flow:
 working directory(init) --> (add) will go to index or staging area --> (commit) will go to local repository.
+local repository - We can't view the local repository. From local repository we can push to remote repository.
 
 5) add file to staging area - git add resh.txt
 (for all files)
