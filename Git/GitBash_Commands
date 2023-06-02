@@ -130,8 +130,8 @@ git diff localrepositorybranchname remoterepositoryurl/remoterepositorybranchnam
 20) Remove from Working directory & Staging area:
 git rm -r -f krn.txt (rm-remove, -r means recovery, -f force removal)
 
-21) Remove from Staging area: (Not working)
-git rm -r --staged krn.txt
+21) Remove from Staging area: 
+git rm -r --cached krn.txt
 
 22) Remove from Working directory:
 rm -r krn.txt
