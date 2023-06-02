@@ -2,9 +2,10 @@
 git config --global user.name "ReshmaNov1995"
 git config --global user.email "reshumoorthy@gmail.com"
 
-2) Check configured name & mail: PUSH
+2) Check configured name & mail: 
   git config --list
-  git remote add origin remote repository's url
+  git remote add origin remote repository's url(where to push)
+  PUSH:
   git push origin master
 It 'll ask for psswd. After signing in->File will be pushed in the remote repository.
 
