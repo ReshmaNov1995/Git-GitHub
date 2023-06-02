@@ -145,7 +145,7 @@ On this scenario we can recover the data which has stagged.
 git checkout -- krn.txt
 
 25) Navigate to the corresponding branch,
-git checkout branchname (New branch will inherit(copy) all the current commits present in the main branch)
+git checkout branchname 
 
 26) Reset - For undo
 Reset can be done only using commitid.
@@ -159,7 +159,8 @@ syx: git reset --hard commitid (It will undo only particular line/file relates t
 
 27) Branching - Default Branch is there always i.e All the committed files will be in Default Branch which is said to be Main branch/Master Branch.
 git branch (To see the avail branch, Current branch indicates by *)
-git branch branchname (To create new branch) (The main should have a commit. If not then it 'll throw error.)
+git branch branchname (To create new branch) (The main should have a commit. If not then it 'll throw error.)(New branch will inherit(copy) all the current commits present in the main branch)
+
 
 28) Merging (Main branch to new branch merging)
 2 types of merge fast forward, 3 way merge. 
@@ -170,9 +171,11 @@ fast forward - Merging without conflicts
 krn.txt -> line1 added as "a"
 commited in master branch
 krn.txt-> line2 added as "b"
-create branch
+commited in master branch
+create branch (This will have the copy of main branch)
 krn.txt-> line3 added as "c"
 commited in master branch
+Now new branch will have the old 2 lines only. Master branch will have 3 lines.
 switch over to new branch
 open krn.txt using->vim->line3 added as "d"
 commited in new branch
@@ -180,7 +183,7 @@ switch over to master branch
 merge it -> conflict occurs bcoz, master branch as line3 & also new branch as different line3. It has confused to merge which line3 to be inserted first.
 Solution: Manually open using vim then change(remove >) & save. Then commit to master branch.
 
-Note: All the branch files are virtual. It can be handled using vim.
+Note: All the branch files are virtual. It can be handled using vim. Before every commit file should be added.
 
 29) Commit in Tree structure:
 After commit,
