@@ -14,7 +14,7 @@ It 'll ask for psswd. After signing in->File will be pushed in the remote reposi
   It 'll copy the repository inside the local folder.
   
 4) Pull - pulling particular file
-  
+  Karun will tell
   
 5) Private Repository Push Action:
   Create private repository in GitHub
@@ -22,8 +22,9 @@ It 'll ask for psswd. After signing in->File will be pushed in the remote reposi
   git config --global user.name "ReshmaNov1995"
   git config --global user.email "reshumoorthy@gmail.com"
   git remote add origin remote repository's url
-  ssh-keygen -t ed25519 -C "reshumoorthy@gmail.com" (-t means target, -C means check, (ed25519)anything)
+  ssh-keygen -t ed25519 -C "reshumoorthy@gmail.com" (-t means target, -C means check)
   It 'll display the key generated folder path. Also the required key.
+  Required key will reside under - "id_ed25519.pub".
   Add the ssh key in github,
   settings->SSH & GPG Keys->New SSH Key->Title Name->Copy the key->Click on Add SSH Key
   git push origin master
