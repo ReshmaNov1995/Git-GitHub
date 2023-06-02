@@ -193,12 +193,13 @@ After commit,
 git branch -d branchname
 
 31) Rebase: Used only for fast forward merge
-     It 'll Copy the commits in the new branch & Paste it in the Master branch.
-     The commits in the new branch will be send to Garbage collector.
+Note: Rebase will be perform from New branch only.
+      Syx: git rebase master (It 'll Copy the commits in the new branch & Paste it in the Master branch.)
+      git checkout master
+      git merge branch (After merging only it 'll moves to Garbage collector)
+     
      Adv: Conflicts will not be occurred.
      DAdv: Tracking is not possible.
- Note: Rebase will be perform from New branch only.
- Syx: git rebase master
- git checkout master
- git merge branch (After merging only it 'll goes to Garbage collector)
+ 
+
      
